@@ -1,71 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thank You | Mental Health Tests</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: rgb(151, 215, 224);
-      color: black;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You - Mental Health Awareness</title>
 
-    .thankyou-container {
-      padding: 40px;
-      border-radius: 15px;
-      text-align: center;
-      max-width: 600px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-      background: linear-gradient(to right, #89f7fe, #66a6ff);
-    }
+<style>
+html, body {
+    height: 100%;
+    margin: 0;
+}
 
-    .thankyou-container h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: darkblue;
-    }
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f5f6ff;
+    color: #333;
+    text-align: center;
+}
 
-    .thankyou-container p {
-      font-size: 1.1rem;
-      margin-bottom: 20px;
-      line-height: 1.6;
-    }
+main {
+    flex: 1; /* takes remaining space so footer stays at bottom */
+}
 
-    .thankyou-container a {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
-      background: #ffd700;
-      color: #333;
-      font-weight: bold;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
+/* HEADER */
+header {
+    background: #4c5bf5;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo img { height: 60px; }
+nav a { color: white; text-decoration: none; margin-left: 20px; font-size: 20px; font-weight: 500; }
+nav a:hover { text-decoration: underline; }
 
-    .thankyou-container a:hover {
-      background: #ffb700;
-    }
-  </style>
+/* THANK YOU SECTION */
+.thankyou-container {
+    margin: 80px auto;
+    width: 90%;
+    max-width: 800px;
+    background: #d6e0ff;
+    padding: 50px 40px;
+    border-radius: 18px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.thankyou-container h1 {
+    font-size: 42px;
+    color: #2a2a72;
+    margin-bottom: 25px;
+}
+
+.thankyou-container p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.thankyou-container a button {
+    background: #4c5bf5;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 17px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.thankyou-container a button:hover { background: #2d3bd1; }
+
+/* FOOTER */
+footer {
+    text-align: center;
+    background: #2f36a6;
+    color: white;
+    padding: 20px 0;
+    font-size: 15px;
+}
+</style>
 </head>
 <body>
-  <div class="thankyou-container">
-    <h1><i> Thank You!</i></h1>
-    <p>
-      Your responses have been submitted successfully.  
-      Remember, these tests are <strong>not a diagnosis</strong>, but they can help you reflect on your mental health.  
-      If you ever feel overwhelmed, please reach out to a trusted professional or helpline.
-    </p>
-    <p>
-       <i>You are not alone</i> — taking this step shows courage. 
-    </p>
-    <a href="index.html">Back to Home</a>
-  </div>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">
+        <img src="C:\Users\loq\OneDrive\Desktop\logo.png" alt="Website Logo">
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<!-- MAIN CONTENT -->
+<main>
+<div class="thankyou-container">
+    <h1><i>Thank You!</i></h1>
+    <p>Your test submission has been received successfully. Taking the first step to understand your mental health is a positive and important decision.</p>
+    
+    <p>Mental health awareness is crucial for everyone. Remember that experiencing symptoms or concerns is normal, and seeking support is a sign of strength, not weakness.</p>
+    
+    <p>We encourage you to:</p>
+    <ul style="text-align:left; max-width:600px; margin:auto 0 20px 0; padding-left:20px; line-height:1.6;">
+        <li>Stay aware of your thoughts, emotions, and behaviors.</li>
+        <li>Reach out to trusted friends, family, or support groups if you feel stressed or overwhelmed.</li>
+        <li>Consult mental health professionals for guidance and care.</li>
+        <li>Maintain a healthy lifestyle, including proper sleep, nutrition, and physical activity.</li>
+        <li>Use this website’s resources to learn more about common mental health conditions and coping strategies.</li>
+    </ul>
+
+    <p>We hope this test has helped you better understand your mental health. Remember, these self-assessments are for awareness only—they are **not a diagnosis**. Professional evaluation is important for accurate support and treatment.</p>
+
+    <p>If you feel you need immediate help, please reach out to local mental health services or helplines.</p>
+
+    <a href="index.html"><button>Return to Home</button></a>
+</div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+    © 2025 Mental Health Awareness Website · Educational Purpose Only
+</footer>
+
 </body>
 </html>
