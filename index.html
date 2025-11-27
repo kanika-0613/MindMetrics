@@ -1,169 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MindMetrics</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", sans-serif;
-      background: linear-gradient(to right, #89f7fe, #66a6ff);
-    }
-    header {
-      background: rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(5px);
-      padding: 15px;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      color: #97f3ff;
-    }
-    header p {
-      font-size: 1.1rem;
-      opacity: 0.9;
-      color: #66a6ff;
-    }
-    nav {
-      margin-top: 15px;
-    }
-    nav a {
-      text-decoration: none;
-      color: #fff;
-      margin: 0 15px;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #ffd700;
-    }
-    .container {
-      max-width: 1000px;
-      margin: 50px auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      padding: 0 20px;
-    }
-    .card {
-      background: white;
-      backdrop-filter: blur(10px);
-      padding: 25px;
-      border-radius: 15px;
-      text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-    }
-    .card h2 {
-      margin: 0 0 15px;
-      font-size: 1.5rem;
-    }
-    .card a {
-      text-decoration: none;
-      background: #ffd700;
-      color: #333;
-      padding: 10px 20px;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-    .card a:hover {
-      background: #ffae00;
-    }
-     footer {
-      background: rgba(0, 0, 0, 0.7);
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 100px;
-      text-align: center;
-      justify-items: center;
-      justify-content: center;
-     }
-    footer h3 {
-      margin-bottom: 10px;
-      font-size: 1.2rem;
-      color: #ffd700;
-    }
-    footer p, footer a {
-      font-size: 0.95rem;
-      color: #eee;
-      text-decoration: none;
-    }
-    footer a:hover {
-      color: #ffd700;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mental Health Awareness</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f5f6ff;
+    color: #333;
+    text-align: center;
+}
+
+/* HEADER */
+header {
+    background: #4c5bf5;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo img { height: 55px; }
+nav a { color: white; text-decoration: none; margin-left: 20px; font-size: 17px; font-weight: 500; }
+nav a:hover { text-decoration: underline; }
+
+/* HERO */
+.hero {
+    padding: 55px 20px;
+    background: #e6e6ff; /* lavender */
+}
+.hero h1 { font-size: 42px; color: #202020; }
+.hero p { font-size: 19px; max-width: 750px; margin: auto; color: #555; line-height: 1.6; }
+
+/* DISORDER CONTAINERS */
+.disorder {
+    margin: 50px auto;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 18px;
+    padding: 35px 25px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    text-align: center;
+}
+.blue { background: #d6e0ff; }      /* soft blue */
+.lavender { background: #e6e6ff; }  /* lavender */
+
+.disorder img {
+    width: 80%;
+    max-width: 400px;
+    border-radius: 12px;
+    margin: 20px auto;
+    display: block;
+}
+.disorder h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #2a2a72;
+}
+.disorder h3 {
+    font-size: 20px;
+    color: #4c5bf5;
+    margin-bottom: 10px;
+}
+.disorder p {
+    max-width: 850px;
+    margin: 10px auto;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #444;
+}
+.disorder ul {
+    max-width: 850px;
+    margin: 10px auto 20px auto;
+    padding-left: 20px;
+    text-align: left;
+}
+.disorder li { margin-bottom: 6px; }
+
+.disorder button {
+    background: #4c5bf5;
+    color: white;
+    border: none;
+    padding: 12px 26px;
+    font-size: 17px;
+    border-radius: 7px;
+    cursor: pointer;
+    margin: 15px auto;
+    display: block;
+}
+.disorder button:hover { background: #2d3bd1; }
+
+/* FOOTER */
+footer {
+    text-align: center;
+    background: #2f36a6;
+    color: white;
+    padding: 20px 0;
+    margin-top: 60px;
+    font-size: 15px;
+}
+</style>
 </head>
 <body>
+
+<!-- HEADER -->
 <header>
-    <h1><i>Mental Health Screening</i></h1>
-    <p><b>Choose a test below to learn more about your mental well-being</b></p>
+    <div class="logo">
+        <img src="logo.png" alt="Website Logo">
+    </div>
+
     <nav>
-      <a href="depression.html">Depression</a>
-      <a href="anxiety.html">Anxiety</a>
-      <a href="bipolar.html">Bipolar</a>
-      <a href="ptsd.html">PTSD</a>
-      <a href="adhd.html">ADHD</a>
-      <a href="eating.html">Eating Disorders</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
     </nav>
-  </header>
+</header>
 
-  <div class="container">
-    <div class="card">
-      <h2>Depression Test</h2>
-      <p>Check for symptoms of depression using the PHQ-9 scale.</p>
-      <a href="depression.html">Start Test</a>
-    </div>
+<!-- HERO -->
+<section class="hero">
+    <h1>Understanding Mental Health</h1>
+    <p>Mental health is vital for overall well-being. Learn about common mental health disorders and recognize early signs through self-assessment tests. Awareness and understanding can help reduce stigma and encourage timely support.</p>
+</section>
 
-    <div class="card">
-      <h2>Anxiety Test</h2>
-      <p>Assess anxiety levels with the GAD-7 questionnaire.</p>
-      <a href="anxiety.html">Start Test</a>
-    </div>
+<!-- DEPRESSION -->
+<div class="disorder blue">
+    <img src="images/depression.jpg" alt="Depression Image">
+    <h2>Depression</h2>
+    <h3>General Info</h3>
+    <p>Depression is a common mental health condition characterized by persistent sadness, low energy, and loss of interest in daily activities. It affects thoughts, feelings, and behaviors, often leading to social withdrawal, reduced productivity, and difficulty coping with stress.</p>
+    <p>Early recognition and intervention improve recovery. Support from family, therapy, medications, and healthy lifestyle changes can make a significant difference.</p>
+    <h3>Symptoms</h3>
+    <ul>
+        <li>Persistent sadness or emptiness</li>
+        <li>Loss of interest in hobbies</li>
+        <li>Changes in sleep or appetite</li>
+        <li>Fatigue or low energy</li>
+        <li>Feelings of guilt or worthlessness</li>
+        <li>Difficulty concentrating</li>
+    </ul>
+    <a href="depression-test.html"><button>Take Depression Test</button></a>
+</div>
 
-    <div class="card">
-      <h2>Bipolar Test</h2>
-      <p>Screen for bipolar disorder with the Mood Disorder Questionnaire.</p>
-      <a href="bipolar.html">Start Test</a>
-    </div>
+<!-- ANXIETY -->
+<div class="disorder lavender">
+    <img src="images/anxiety.jpg" alt="Anxiety Image">
+    <h2>Anxiety</h2>
+    <h3>General Info</h3>
+    <p>Anxiety is a natural response to stress, but excessive or persistent worry that disrupts daily life may indicate an anxiety disorder. It can affect physical health, work, and relationships.</p>
+    <p>Managing anxiety involves recognizing triggers, practicing relaxation techniques, maintaining social support, and seeking professional therapy when needed.</p>
+    <h3>Symptoms</h3>
+    <ul>
+        <li>Excessive worrying</li>
+        <li>Panic attacks</li>
+        <li>Restlessness or agitation</li>
+        <li>Rapid heartbeat or sweating</li>
+        <li>Difficulty concentrating</li>
+        <li>Trouble sleeping</li>
+    </ul>
+    <a href="anxiety-test.html"><button>Take Anxiety Test</button></a>
+</div>
 
-    <div class="card">
-      <h2>PTSD Test</h2>
-      <p>Evaluate PTSD symptoms with the PCL-5 checklist.</p>
-      <a href="ptsd.html">Start Test</a>
-    </div>
+<!-- BIPOLAR -->
+<div class="disorder blue">
+    <img src="images/bipolar.jpg" alt="Bipolar Image">
+    <h2>Bipolar Disorder</h2>
+    <h3>General Info</h3>
+    <p>Bipolar disorder is a mental health condition involving extreme mood swings from manic highs to depressive lows. These mood changes can disrupt daily life, work, and relationships.</p>
+    <p>Early support, structured routines, therapy, and sometimes medications help stabilize mood and improve functioning.</p>
+    <h3>Symptoms</h3>
+    <ul>
+        <li>Manic: high energy, little sleep, impulsive actions</li>
+        <li>Depressive: sadness, fatigue, loss of interest, hopelessness</li>
+        <li>Irritability or agitation</li>
+        <li>Difficulty concentrating during mood episodes</li>
+    </ul>
+    <a href="bipolar-test.html"><button>Take Bipolar Test</button></a>
+</div>
 
-    <div class="card">
-      <h2>ADHD Test</h2>
-      <p>Check attention and focus symptoms with the ASRS scale.</p>
-      <a href="adhd.html">Start Test</a>
-    </div>
+<!-- ADHD -->
+<div class="disorder lavender">
+    <img src="images/adhd.jpg" alt="ADHD Image">
+    <h2>ADHD</h2>
+    <h3>General Info</h3>
+    <p>ADHD (Attention-Deficit/Hyperactivity Disorder) affects focus, attention, and impulse control. It can impact academic performance, work, and social relationships.</p>
+    <p>Recognizing symptoms early and implementing behavioral strategies, therapy, and routine management can help manage daily challenges effectively.</p>
+    <h3>Symptoms</h3>
+    <ul>
+        <li>Difficulty focusing or paying attention</li>
+        <li>Forgetfulness and disorganization</li>
+        <li>Impulsive behavior</li>
+        <li>Restlessness or hyperactivity</li>
+        <li>Difficulty completing tasks</li>
+    </ul>
+    <a href="adhd-test.html"><button>Take ADHD Test</button></a>
+</div>
 
-    <div class="card">
-      <h2>Eating Disorder Test</h2>
-      <p>Screen for eating-related concerns with the SCOFF questionnaire.</p>
-      <a href="eating.html">Start Test</a>
-    </div>
-  </div>
- <footer>
-    <div>
-      <h3>Quick Links</h3>
-      <p><a href="index.html">Home</a> | <a href="#tests">Tests</a> | <a href="about.html">About</a></p>
-    </div>
-    <div>
-      <h3>Need Help?</h3>
-      <p>If you are in crisis, please seek professional help immediately or call your local helpline.</p>
-    </div>
-    <div>
-      <h3>Contact</h3>
-      <p>Email: support@mentalhealth.org</p>
-      <p>Phone: +91 12345 67890</p>
-    </div>
-  </footer>
+<!-- PTSD -->
+<div class="disorder blue">
+    <img src="images/ptsd.jpg" alt="PTSD Image">
+    <h2>PTSD</h2>
+    <h3>General Info</h3>
+    <p>PTSD (Post-Traumatic Stress Disorder) may develop after experiencing or witnessing traumatic events. Symptoms can persist long-term and interfere with daily life.</p>
+    <p>Early therapy, support networks, and coping strategies are crucial for recovery and reducing distressing symptoms.</p>
+    <h3>Symptoms</h3>
+    <ul>
+        <li>Flashbacks or nightmares</li>
+        <li>Avoidance of trauma reminders</li>
+        <li>Hypervigilance or heightened startle response</li>
+        <li>Emotional numbness</li>
+        <li>Difficulty concentrating or sleeping</li>
+    </ul>
+    <a href="ptsd-test.html"><button>Take PTSD Test</button></a>
+</div>
+
+<!-- EATING DISORDERS -->
+<div class="disorder lavender">
+    <img src="images/eating.jpg" alt="Eating Disorders Image">
+    <h2>Eating Disorders</h2>
+    <h3>General Info</h3>
+    <p>Eating disorders involve unhealthy attitudes or behaviors related to food, weight, and body image. They can seriously impact physical and mental health.</p>
+    <p>Early awareness, therapy, nutrition counseling, and supportive environments improve recovery and prevent complications.</p>
+    <h3>Symptoms</h3>
+    <ul>
+        <li>Anorexia: extreme restriction of food intake</li>
+        <li>Bulimia: bingeing and purging behaviors</li>
+        <li>Binge Eating Disorder: uncontrolled eating episodes</li>
+        <li>Preoccupation with body image or weight</li>
+        <li>Emotional distress around food</li>
+    </ul>
+    <a href="eating-test.html"><button>Take Eating Disorder Test</button></a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    © 2025 Mental Health Awareness Website · Educational Purpose Only
+</footer>
 
 </body>
 </html>
